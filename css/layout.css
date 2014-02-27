@@ -1,0 +1,170 @@
+body {
+	color: #ccc;
+	font-family: "Trebuchet MS", "Lucida Grande", Lucida, Verdana, Helvetica, Arial, Helvetica, sans-serif;
+	margin: 0 auto;
+	padding: 0;
+	font-size: 14px;
+	background: #555;
+}
+.bodyTBs {
+	margin: 0;
+	padding: 0;
+	font: 11px "Lucida Grande", Arial, Helvetica, Verdana, sans-serif;
+	background: #202020;
+	color: #bbb;
+}
+
+.wraper {	
+	clear: both;
+}
+a {
+	color: #fff;
+	font-size: 0.9em;
+	font-weight:bolder;
+}
+a:hover {
+	color:#ff0000;
+}
+h1
+{
+	color: #fff;
+	font-size: 1.4em;
+	font-weight: bolder;
+	margin: 0 40px;
+	padding: 0.08em 0;
+}
+
+h1 sup
+{
+	color: #ddd;
+	font-size: 0.5em;
+}
+
+h1 a
+{
+	color: #fff;
+	text-decoration: none;
+}
+
+h1 .company, h1 a .company
+{
+	font-size: 1.3em;
+	color: #ffa000;
+}
+
+h2
+{
+	color: #ddd;
+	font-size: 1.3em;
+}
+
+h3
+{
+	color: #fff;
+	font-size: 1.2em;
+}
+
+h4
+{
+	font-size: 1.1em;
+	margin: 0px;
+}
+
+.content
+{
+	margin: 0 20px;
+	/*border: 1px solid white;*/
+}
+
+.content a
+{
+	color: #fff;
+}
+
+
+.content p.linkage
+{
+	margin-top: 2em;
+	text-align: right;
+	font-size: 1.7em;
+	color: #ddd;
+}
+
+.content p.linkage a { color: #fff; }
+
+#myGallery
+{
+	text-align: left;
+	margin: auto;
+	margin-top:90px;
+}
+
+.accToggler{
+	margin: 3px auto;
+	padding: 3px;
+	width: 210px;
+	background: #424242;
+	color: #f4f4f4;
+	border: 1px solid #555555;
+	cursor: pointer;
+}
+.accContent{
+	margin: 0px auto;
+	width: 210px;
+}
+.coord {
+	background: #424242;
+	border: 1px solid #555555;
+}
+#footer {
+	width:100%;
+	text-align: center;
+	padding-top:30px;
+}
+
+ul#menufooter {
+	padding: 0 12px 0 12px;
+	display: inline;
+	font-style: oblique;
+}
+ul#menufooter li {
+	list-style-type: none;
+	display: inline;
+	color: #fff;
+	/*text-shadow: 0px 0px .4em #000;*/
+	padding: 0.2em;
+	margin: 0;
+	font-size:1em;
+}
+
+ul#menufooter li a {
+	color: #ffa000;
+	text-decoration: none;
+	text-align: center;
+	font-size:1em;
+}
+
+ul#menufooter li a:hover {
+	color: #fff;
+}
+/*- bouton -*/
+.but6 {
+  background:url("../images/Bouton.gif") no-repeat left top;
+  margin:0;
+  padding:8px 0 0 4px;
+  height:32px;
+  width:258px;
+}
+
+.but7 {
+  background:url("../images/BoutonOver.gif") no-repeat left top;
+  margin:0;
+  padding:8px 0 0 4px;
+  height:32px;
+  width:258px;
+}
+.but6 a,.but7 a {
+  font-size:14px;
+  text-decoration:none;
+  color:#FFF;
+}
