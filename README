@@ -1,5 +1,9 @@
+Installation :
 Clone into document root folder of your IspConfig installation server
+Edit configuration files web_inf/setting.php
+
 Connect to http://your-new.server.net/Migration-Plesk9-IspConfig3/
-Follow the instruction displayed.
+Follow the instruction displayed in First expended div.
+
 
 Translation available in French and English.
