@@ -33,10 +33,29 @@ require_once("lib/phpmailer/class.phpmailer.php");
 	<link rel="stylesheet" href="css/layout.css" type="text/css" media="screen" charset="utf-8" />
 <title><?php echo $faqTitle ?></title>
 </head>
-<?php$laDate = date("m/d/Y H:i:s");
-$ip = getHostByAddr($_SERVER['REMOTE_ADDR']);$eol="\r\n";
-$leMessage = "Un utilisateur de <b>Migration-Plesk9-IspConfig3</b> vous laisse un message".$eol.			"Nom : ".$_POST['fname'].$eol.			"Prénom : ".$_POST['lname'].$eol.			"Email : ".$_POST['email'].$eol.			"Voici le message de votre visiteur :".$eol.			"------------------------------".$eol.			$_POST['message'].$eol.			"Logged Info :".$eol.			"------------------------------".$eol.			"Using : ".$_SERVER['HTTP_USER_AGENT'].$eol.			"Hostname : ".$ip.$eol.			"Date et Heure :  ".$laDate.$eol.			"Addresse IP : ".$_SERVER['REMOTE_ADDR'];
-$mail = new PHPMailer();
+<?php
+$laDate = date("m/d/Y H:i:s");
+
+$ip = getHostByAddr($_SERVER['REMOTE_ADDR']);
+
+$eol="\r\n";
+
+$leMessage = "Un utilisateur de <b>Migration-Plesk9-IspConfig3</b> vous laisse un message".$eol.
+			"Nom : ".$_POST['fname'].$eol.
+			"Prénom : ".$_POST['lname'].$eol.
+			"Email : ".$_POST['email'].$eol.
+			"Voici le message de votre visiteur :".$eol.
+			"------------------------------".$eol.
+			$_POST['message'].$eol.
+			"Logged Info :".$eol.
+			"------------------------------".$eol.
+			"Using : ".$_SERVER['HTTP_USER_AGENT'].$eol.
+			"Hostname : ".$ip.$eol.
+			"Date et Heure :  ".$laDate.$eol.
+			"Addresse IP : ".$_SERVER['REMOTE_ADDR'];
+
+
+$mail = new PHPMailer();
 $mail->SetLanguage("fr","lib/phpmailer/language/");
 
 //$mail->IsSMTP();	// set mailer to use SMTP
@@ -63,13 +82,15 @@ $mail->Subject = "Contact on Migration-Ples9-IspConfig3";
 $mail->Body    = str_replace($eol,'<br>',$leMessage);
 $mail->AltBody = str_replace('<b>','"',str_replace('</b>','"',$leMessage));
 
-if(!$mail->Send())
+if(trim($leMessage)!="" && !$mail->Send())
 {
    echo "Message could not be sent. <p>";
    echo "Mailer Error: " . $mail->ErrorInfo;
    exit;
-}?>
-<body><div style="margin-top:150px;text-align:center">
+}
+?>
+
+<body><div style="margin-top:150px;text-align:center">
 <?php echo $shadowResultmail ?>
 </div>
 </body>
