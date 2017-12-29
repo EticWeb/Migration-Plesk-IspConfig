@@ -82,9 +82,9 @@ $mail->Subject = "Contact on Migration-Ples9-IspConfig3";
 $mail->Body    = str_replace($eol,'<br>',$leMessage);
 $mail->AltBody = str_replace('<b>','"',str_replace('</b>','"',$leMessage));
 
-if(trim($leMessage)!="" && !$mail->Send())
+if(trim($leMessage)=="" || !$mail->Send())
 {
-   echo "Message could not be sent. <p>";
+   echo "Message could not be sent. Or no message to send<p>";
    echo "Mailer Error: " . $mail->ErrorInfo;
    exit;
 }
